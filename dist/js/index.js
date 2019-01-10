@@ -50,9 +50,7 @@
   // 通过url query获取用户id
   function getAccountId(name, url) {
     if (!url) url = window.location.href
-    /* eslint-disable no-useless-escape */
     name = name.replace(/[\[\]]/g, '\\$&')
-    /* eslint-enable no-useless-escape */
     let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
     let results = regex.exec(url)
     if (!results) return null
@@ -62,3 +60,5 @@
 
   copy('.copy-btn')
 })(Zepto)
+
+//# sourceMappingURL=../maps/index.js.map
